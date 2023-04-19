@@ -1,9 +1,8 @@
-
-body{
+body {
   scroll-behavior: smooth;
   /* font-family: 'Raleway', sans-serif; */
   /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 .main_home {
   background: rgba(0, 0, 0, 0.4);
@@ -13,11 +12,19 @@ body{
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
   background-attachment: fixed;
 }
-.navbar{
+.navbar {
   background-color: rgba(240, 248, 255, 0.073);
- backdrop-filter: blur(10px);
- 
+  backdrop-filter: blur(10px);
 }
+
+.blob {
+  background: url("./svg/blobanimation.svg");
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  filter: drop-shadow(2px 5px 10px rgba(255, 255, 255, 0.3));
+}
+
 .home {
   background-color: rgba(240, 248, 255, 0.073);
 
@@ -37,20 +44,47 @@ body{
   backdrop-filter: blur(15px);
   border-radius: 5px;
 }
-.btn{
+.btn {
   background-color: rgba(240, 248, 255, 0.125);
   backdrop-filter: blur(10px);
-border-radius: 5px;
+  border-radius: 5px;
 }
 #homeSvg {
   filter: drop-shadow(2px 5px 8px rgb(0 0 0 / 0.3));
 }
+.img__container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.036);
 
-.img__container{
+  transition: all 0.2s;
+}
+
+/* .img__container:hover::before{
+  background-color: transparent;
+
+} */
+
+.img__container {
   border: 5px solid rgba(255, 255, 255, 0.193);
   backdrop-filter: blur(10px);
-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.193);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.47);
+  position: relative;
+  transition: all 0.5s;
 }
+
+.img__container:hover.img__container::before {
+  background-color: transparent;
+}
+
+.img__container:hover {
+  border: 4px solid transparent;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

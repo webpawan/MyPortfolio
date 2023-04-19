@@ -70,7 +70,7 @@ const items_name = [
   {
     name: "MongoDB",
   },
-  {name:"Mongoose"},
+  { name: "Mongoose" },
   {
     name: "JWT",
   },
@@ -98,23 +98,21 @@ const About = () => {
       <div className="flex items-top justify-center about h-screen overflow-hidden bg-black text-white  pt-28 px-28 ">
         <div className="basis-1/2  ">
           <h1 className="text-3xl about w-1/2 border-b-2">About </h1>
-          <p className="pt-5 font-light text-base leading-8">
+          <p className="pt-5 w-[75%] font-light text-base leading-8">
             As a self-taught programmer, I am a dedicated and motivated
-            individual with a passion for coding and software development.
-            Passionate and self-motivated front-end developer with a strong
-            background in React JS and foundational knowledge in backend
-            technologies such as Express JS, MongoDB, and Node JS.I have a
-            strong ability to learn new programming concepts quickly, and I am
-            committed to staying up-to-date with the latest technologies Strong
-            understanding of web development concepts such as RESTful APIs, MVC
-            architecture, and responsive design.
+            individual with a passion for coding and software development. A
+            strong background in React JS (Front-end Development) and Basic
+            knowledge in backend technologies such as Express JS, MongoDB, and
+            Node JS also i can create RESTful APIs with MVC architecture .I have a strong ability to learn new programming
+            concepts quickly, and I am committed to staying up-to-date with the
+            latest technologies.
           </p>
         </div>
         <div className="basis-1/2  ">
           <div className="title flex flex-col justify-center items-center">
             <h1 className="text-3xl px-10 about  border-b-2">skills </h1>
             <motion.div
-              initial={{ opacity: 0}}
+              initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
               }}

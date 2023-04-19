@@ -26,27 +26,27 @@ const Home = () => {
               web applications
             </p>
 
-            <motion.div
-             
-            >
+            <motion.div>
               <motion.button
-              animate={{ y: [-8, 20] }}
-              transition={{
-                duration: 2,
-                ease: "easeInOut",
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
+                animate={{ y: [-8, 20] }}
+                transition={{
+                  duration: 2,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
                 className="mt-10 p-5 btn "
-            
               >
                 Download my Resume
               </motion.button>
             </motion.div>
           </div>
-          <div className=" basis-1/2 flex justify-end items-center  ">
-            <div className="h-52 w-52 rounded-full overflow-hidden  flex items-center justify-center  img__container">
-              <img src={pic} alt="" srcset="" />
+          <div className=" basis-1/2 flex justify-end items-center relative   parent">
+            <div className="flex justify-center items-center">
+              <div className="blob"></div>
+              <div className="h-52 w-52 rounded-full overflow-hidden  flex items-center justify-center  img__container ">
+                <img src={pic} alt="" srcset="" className=''/>
+              </div>
             </div>
           </div>
         </div>
