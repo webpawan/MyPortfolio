@@ -6,15 +6,43 @@ body {
 }
 .main_home {
   background: rgba(0, 0, 0, 0.4);
-  background: url("../../../assets/images/milad-fakurian-bexwsdM5BCw-unsplash.jpg")
-    top;
+  background: url("../../../assets/images/mo-qAZEuKcGEiI-unsplash.jpg")
+    center;
   background-size: cover;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.123);
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 .navbar {
   background-color: rgba(240, 248, 255, 0.073);
   backdrop-filter: blur(10px);
+  
+}
+
+.navbar ul{
+  width: 100%;
+ margin-top: 10rem;
+ text-align: center;
+}
+
+.navbar ul li{
+padding: 10px;
+/* background-color: white; */
+color: white;
+/* width: 100%; */
+transition: all .5s ease-in-out;
+position: relative;
+cursor: pointer;
+
+}
+
+.navbar ul li::before{
+
+}
+
+.navbar ul li:hover{
+background-color: white;
+color: black;
 }
 
 .blob {
@@ -27,9 +55,8 @@ body {
 
 .home {
   background-color: rgba(240, 248, 255, 0.073);
+backdrop-filter: blur(10px);
 
-  background: url("../../../assets/images/milad-fakurian-bexwsdM5BCw-unsplash.jpg")
-    bottom;
   background-size: cover;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
@@ -59,7 +86,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.036);
+  background-color: rgba(62, 62, 62, 0.036);
 
   transition: all 0.2s;
 }

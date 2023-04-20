@@ -1,8 +1,18 @@
 .about{
-    background-color: black;
+    background:url('../../../assets/images/mo-i7uLJF7Ws-o-unsplash.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
+}
+
+.bg{
+    background-color: rgba(255, 255, 255, 0.129);
+    backdrop-filter: blur(3px);
+    padding: 1rem;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
 }
 .myWheel{
     height: 100vh;
@@ -26,6 +36,7 @@
     right: 0;
   
 }
+
 
 
 .img__containr{

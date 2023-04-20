@@ -96,9 +96,9 @@ const About = () => {
   return (
     <>
       <div className="flex items-top justify-center about h-screen overflow-hidden bg-black text-white  pt-28 px-28 ">
-        <div className="basis-1/2  ">
-          <h1 className="text-3xl about w-1/2 border-b-2">About </h1>
-          <p className="pt-5 w-[75%] font-light text-base leading-8">
+        <div className="basis-1/2 bg  ">
+          <h1 className="text-3xl  w-1/2 border-b-2">About </h1>
+          <p className="pt-5 w-[85%] font-bold text-base leading-10 ">
             As a self-taught programmer, I am a dedicated and motivated
             individual with a passion for coding and software development. A
             strong background in React JS (Front-end Development) and Basic
@@ -108,9 +108,9 @@ const About = () => {
             latest technologies.
           </p>
         </div>
-        <div className="basis-1/2  ">
+        <div className="basis-1/2 bg ">
           <div className="title flex flex-col justify-center items-center">
-            <h1 className="text-3xl px-10 about  border-b-2">skills </h1>
+            <h1 className="text-3xl px-10   border-b-2">skills </h1>
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{

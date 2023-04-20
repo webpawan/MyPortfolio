@@ -9,10 +9,10 @@ const Home = () => {
   
   return (
     <>
-      <div className="h-screen  main_home  ">
-        <Navbar />
+      <motion.div initial={{opacity:0}} animate={{opacity:1}} className="h-screen  main_home flex justify-start items-center">
+        {/* <Navbar /> */}
 
-        <div className="relative flex justify-between items-center w-4/5  px-10 mt-4 z-10 mx-auto home h-[85%]">
+        <div className="relative flex justify-start items-center w-4/5   px-10 z-10 mx-auto home h-[80%] ">
           <div className=" basis-1/2     text-white  ">
             <motion.p className=" font-semibold text-2xl pb-1  ">
               Hi, my name is
@@ -22,7 +22,7 @@ const Home = () => {
             </h2>
 
             <p className="text-3xl  mt-7 p-3 home__para">
-              MERN developer with a focus on user experience | Creating seamless
+              MERN developer with a focus on Front End Development | Creating seamless
               web applications
             </p>
 
@@ -52,8 +52,8 @@ const Home = () => {
         </div>
 
         {/* ------------svg----------- */}
-        <SvgCom />
-      </div>
+        {/* <SvgCom /> */}
+      </motion.div>
     </>
   );
 }

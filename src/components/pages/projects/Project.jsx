@@ -26,12 +26,12 @@ setData(sortedData)
    
   
   return (
-    <div className=" bg-black text-white p-10 ">
+    <div className="projects  text-white p-10 ">
       <div className=" text-center ">
         <h1 className="main__heading text-4xl border-b-2 px-10 pb-2 inline-block">
           Projects
         </h1>
-        <div className="mx-auto container   bg-black ">
+        <div className="mx-auto container    ">
           {/* <div className="flex flex-col justify-start items-start w-4/5 mx-auto text-sm">
             <label
               for="tech"
@@ -52,7 +52,7 @@ setData(sortedData)
               <option>HTML , CSS & JavaScript</option>
             </select>
           </div> */}
-          <div className="grid grid-cols-3 grid-rows-2  w-full ">
+          <div className="grid grid-cols-3 grid-rows-2  w-full myGrid">
             {data.map((item, i) => {
               return (
                 <div class="flex justify-center flex-col items-center card ">

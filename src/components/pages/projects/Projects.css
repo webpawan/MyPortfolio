@@ -1,12 +1,21 @@
-.main__heading{
-
+.projects{
+background:url('../../../assets/images/mo-NhYj5-Ib7ik-unsplash.jpg') ;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 .card{
     position: relative;
 overflow: hidden;
 transition: all 1s;
+    opacity: .1;
+
 }
 
+.card:hover{
+    opacity: 1;
+}
 
 
 
@@ -36,7 +45,8 @@ transition: all .3s;
     background-color: transparent;
 }
 
-
+.myGrid{
+}
  
 .info h2{
 }
