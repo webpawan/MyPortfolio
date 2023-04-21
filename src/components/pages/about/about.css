@@ -1,47 +1,44 @@
-.about{
-    background:url('../../../assets/images/mo-i7uLJF7Ws-o-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Poppins', sans-serif;
+.about {
+  background:url('../../../assets/images/simon-lee-HmHOhR5meGo-unsplash.jpg');
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
 }
 
 .bg{
     background-color: rgba(255, 255, 255, 0.129);
-    backdrop-filter: blur(3px);
-    padding: 1rem;
-    color: black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(10px);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.177);
 }
-.myWheel{
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.wheel__tech--left{
- height: 60%;
-    width: 10%;
-    position: absolute;
-    top: 5%;
-    left: 0;
-}
-.wheel__tech{
-    height: 60%;
-    width: 10%;
-    position: absolute;
-    top: 5%;
-    right: 0;
-  
+.myWheel {
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-
-
-.img__containr{
-    rotate:  90deg;
+.wheel__tech--left {
+  height: 85%;
+  width: 10%;
+  position: absolute;
+  top: 5%;
+  left: 0;
 }
-.item_name{
-    rotate: -90deg;
+.wheel__tech {
+  height: 85%;
+  width: 10%;
+  position: absolute;
+  top: 5%;
+  right: 0;
+}
+
+.img__containr {
+  rotate: 90deg;
+}
+.item_name {
+  rotate: -90deg;
 }

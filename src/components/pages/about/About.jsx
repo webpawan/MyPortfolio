@@ -95,110 +95,123 @@ const items_name = [
 const About = () => {
   return (
     <>
-      <div className="flex items-top justify-center about h-screen overflow-hidden bg-black text-white  pt-28 px-28 ">
-        <div className="basis-1/2 bg  ">
-          <h1 className="text-3xl  w-1/2 border-b-2">About </h1>
-          <p className="pt-5 w-[85%] font-bold text-base leading-10 ">
-            As a self-taught programmer, I am a dedicated and motivated
-            individual with a passion for coding and software development. A
-            strong background in React JS (Front-end Development) and Basic
-            knowledge in backend technologies such as Express JS, MongoDB, and
-            Node JS also i can create RESTful APIs with MVC architecture .I have a strong ability to learn new programming
-            concepts quickly, and I am committed to staying up-to-date with the
-            latest technologies.
-          </p>
-        </div>
-        <div className="basis-1/2 bg ">
-          <div className="title flex flex-col justify-center items-center">
-            <h1 className="text-3xl px-10   border-b-2">skills </h1>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-              }}
-              className="myWheel"
-            >
-              {items.map((icon, index) => {
-                return (
-                  <motion.div
-                    className="wheel__tech"
-                    key={index}
-                    initial="intial"
-                    animate={["animate", "intialHide"]}
-                    variants={{
-                      initial: {
-                        opacity: 0,
-                      },
-                      intialHide: {
-                        opacity: 1,
-                        transition: {
-                          delay: index + 1,
-                        },
-                      },
-                      animate: {
-                        rotate: -360,
-                        transition: {
-                          duration: items.length,
-                          repeat: Infinity,
-                          delay: index + 1,
-                          ease: "easeInOut",
-                        },
-                      },
-                    }}
-                  >
+      <div className="flex  items-center justify-center about h-screen overflow-hidden bg-black text-white px-28 ">
+        <div className="flex items-center justify-between">
+          <div className="basis-1/2 bg   h-[65vh] text-center">
+            <div className="flex justify-center items-center  ">
+              <h1 className="text-4xl px-5 text-center inline-block justify-center  border-b-2">
+                About{" "}
+              </h1>
+            </div>
+            <p className="pt-5   text-base leading-10 p-[2rem] ">
+              As a self-taught programmer, I am a dedicated and motivated
+              individual with a passion for coding and software development. A
+              strong background in React JS (Front-end Development) and Basic
+              knowledge in backend technologies such as Express JS, MongoDB, and
+              Node JS also i can create RESTful APIs with MVC architecture .I
+              have a strong ability to learn new programming concepts quickly,
+              and I am committed to staying up-to-date with the latest
+              technologies.
+            </p>
+          </div>
+          <div className="basis-1/2  h-fit">
+            <div className="title flex flex-col h-fit justify-center items-center">
+              <h1 className="text-3xl px-10   border-b-2">skills </h1>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                }}
+                className="myWheel"
+              >
+                {items.map((icon, index) => {
+                  return (
                     <motion.div
-                      whileInView={{ opacity: 1, transition: { duration: 1 } }}
-                      initial={{ opacity: 0 }}
-                      className="img__containr"
+                      className="wheel__tech"
+                      key={index}
+                      initial="intial"
+                      animate={["animate", "intialHide"]}
+                      variants={{
+                        initial: {
+                          opacity: 0,
+                        },
+                        intialHide: {
+                          opacity: 1,
+                          transition: {
+                            delay: index + 1,
+                          },
+                        },
+                        animate: {
+                          rotate: -360,
+                          transition: {
+                            duration: items.length,
+                            repeat: Infinity,
+                            delay: index + 1,
+                            ease: "easeInOut",
+                          },
+                        },
+                      }}
                     >
-                      <img
-                        src={icon.url}
-                        className=""
-                        style={{ backgroundColor: "white", width: "50px" }}
-                      />
+                      <motion.div
+                        whileInView={{
+                          opacity: 1,
+                          transition: { duration: 1 },
+                        }}
+                        initial={{ opacity: 0 }}
+                        className="img__containr"
+                      >
+                        <img
+                          src={icon.url}
+                          className=""
+                          style={{ backgroundColor: "white", width: "50px" }}
+                        />
+                      </motion.div>
                     </motion.div>
-                  </motion.div>
-                );
-              })}
-              {items_name.map((item, index) => {
-                return (
-                  <motion.div
-                    className="wheel__tech--left"
-                    key={index}
-                    initial="intial"
-                    animate={["animate", "intialHide"]}
-                    variants={{
-                      initial: {
-                        opacity: 0,
-                      },
-                      intialHide: {
-                        opacity: 1,
-                        transition: {
-                          delay: index + 1,
-                        },
-                      },
-                      animate: {
-                        rotate: 360,
-                        transition: {
-                          duration: items_name.length,
-                          repeat: Infinity,
-                          delay: index + 1,
-                          ease: "easeInOut",
-                        },
-                      },
-                    }}
-                  >
+                  );
+                })}
+                {items_name.map((item, index) => {
+                  return (
                     <motion.div
-                      whileInView={{ opacity: 1, transition: { duration: 1 } }}
-                      initial={{ opacity: 0 }}
-                      className="item_name"
+                      className="wheel__tech--left"
+                      key={index}
+                      initial="intial"
+                      animate={["animate", "intialHide"]}
+                      variants={{
+                        initial: {
+                          opacity: 0,
+                        },
+                        intialHide: {
+                          opacity: 1,
+                          transition: {
+                            delay: index + 1,
+                          },
+                        },
+                        animate: {
+                          rotate: 360,
+                          transition: {
+                            duration: items_name.length,
+                            repeat: Infinity,
+                            delay: index + 1,
+                            ease: "easeInOut",
+                          },
+                        },
+                      }}
                     >
-                      <p>{item.name}</p>
+                      <motion.div
+                        whileInView={{
+                          opacity: 1,
+                          transition: { duration: 1 },
+                        }}
+                        initial={{ opacity: 0 }}
+                        className="item_name"
+                      >
+                        <p>{item.name}</p>
+                      </motion.div>
                     </motion.div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
+                  );
+                })}
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>

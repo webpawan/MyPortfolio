@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from './Navbar';
 import  pic  from "../../../assets/images/WhatsApp Image 2023-03-29 at 11.01.51 AM.jpeg";
 import { motion } from "framer-motion";
-import SvgCom from './svg/SvgCom';
 import Name from './svg/Name';
 
 const Home = () => {
@@ -10,7 +9,7 @@ const Home = () => {
   return (
     <>
       <motion.div initial={{opacity:0}} animate={{opacity:1}} className="h-screen  main_home flex justify-start items-center">
-        {/* <Navbar /> */}
+        <Navbar />
 
         <div className="relative flex justify-start items-center w-4/5   px-10 z-10 mx-auto home h-[80%] ">
           <div className=" basis-1/2     text-white  ">
@@ -21,7 +20,7 @@ const Home = () => {
               <Name />
             </h2>
 
-            <p className="text-3xl  mt-7 p-3 home__para">
+            <p className="text-3xl  mt-7 p-3 home__para text-orange-50">
               MERN developer with a focus on Front End Development | Creating seamless
               web applications
             </p>
