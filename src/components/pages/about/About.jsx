@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./about.css";
 import { motion } from "framer-motion";
 
@@ -92,18 +92,26 @@ const items_name = [
   },
 ];
 
+
 const About = () => {
+
+
+
   return (
     <>
-      <div className="flex  items-center justify-center about h-screen overflow-hidden bg-black text-white px-28 ">
-        <div className="flex items-center justify-between">
-          <div className="basis-1/2 bg   h-[65vh] text-center">
+      <div className="flex  items-center justify-center about h-screen overflow-hidden  text-white sm:px-28  ">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { duration: 2 } }}
+          className="flex flex-col sm:flex-row items-center justify-between"
+        >
+          <div className="basis-1/2 bg h-[80vh]  sm:h-[65vh] text-center">
             <div className="flex justify-center items-center  ">
-              <h1 className="text-4xl px-5 text-center inline-block justify-center  border-b-2">
+              <h1 className="text-xl  sm:text-4xl px-5 text-center inline-block justify-center  border-b-2">
                 About{" "}
               </h1>
             </div>
-            <p className="pt-5   text-base leading-10 p-[2rem] ">
+            <p className="pt-5  text-base font-light sm:font-normal sm:text-xl sm:leading-10 p-[2rem] ">
               As a self-taught programmer, I am a dedicated and motivated
               individual with a passion for coding and software development. A
               strong background in React JS (Front-end Development) and Basic
@@ -213,7 +221,7 @@ const About = () => {
               </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

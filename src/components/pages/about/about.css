@@ -11,9 +11,19 @@
 .bg{
     background-color: rgba(255, 255, 255, 0.129);
     backdrop-filter: blur(10px);
-    color: white;
+    color: rgba(255, 255, 255, 0.775);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.177);
+    transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s;
+    font-size: larger;
 }
+
+.bg:hover{
+    background-color: rgba(0, 0, 0, 0.832);
+color: whitesmoke;
+font-weight: 400;
+}
+
+
 .myWheel {
   height: 60vh;
   width: 100%;
