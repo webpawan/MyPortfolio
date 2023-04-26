@@ -85,7 +85,7 @@ const Home = () => {
             <div className="flex justify-center items-center">
               <div className="blob"></div>
               <div className="h-52 w-52 rounded-full overflow-hidden  flex items-center justify-center  img__container ">
-                <img src={pic} alt="" srcset="" className="" />
+                <img src={pic} alt=""  className="" />
               </div>
             </div>
           </motion.div>
