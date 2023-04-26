@@ -92,20 +92,27 @@ const items_name = [
   },
 ];
 
-
 const About = () => {
-
-
-
   return (
     <>
       <div className="flex  items-center justify-center about h-screen overflow-hidden  text-white sm:px-28  ">
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1, transition: { duration: 2 } }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 2, delay: 1, stiffness: 100 },
+          }}
           className="flex flex-col sm:flex-row items-center justify-between"
         >
-          <div className="basis-1/2 bg h-[80vh]  sm:h-[65vh] text-center">
+          <motion.div
+            initial={{ y: "100%" }}
+            whileInView={{
+              y: 0,
+              transition: { type: "spring", stiffness: 100,duration:1 },
+            }}
+            
+            className="basis-1/2 bg h-[80vh]  sm:h-[65vh] text-center"
+          >
             <div className="flex justify-center items-center  ">
               <h1 className="text-xl  sm:text-4xl px-5 text-center inline-block justify-center  border-b-2">
                 About{" "}
@@ -121,7 +128,7 @@ const About = () => {
               and I am committed to staying up-to-date with the latest
               technologies.
             </p>
-          </div>
+          </motion.div >
           <div className="basis-1/2  h-fit">
             <div className="title flex flex-col h-fit justify-center items-center">
               <h1 className="text-3xl px-10   border-b-2">skills </h1>
@@ -130,12 +137,12 @@ const About = () => {
                 whileInView={{
                   opacity: 1,
                 }}
-                className="myWheel"
+                className=" sm:h-[60vh] sm:w-full sm:relative sm:overflow-hidden "
               >
                 {items.map((icon, index) => {
                   return (
                     <motion.div
-                      className="wheel__tech"
+                      className=" sm:h-[85%] sm:w-[10%] sm:absolute sm:top-[5%] right-0 "
                       key={index}
                       initial="intial"
                       animate={["animate", "intialHide"]}
@@ -180,7 +187,9 @@ const About = () => {
                 {items_name.map((item, index) => {
                   return (
                     <motion.div
-                      className="wheel__tech--left"
+                      className="
+                      sm:h-[85%] sm:w-[10%] sm:absolute sm:top-[5%] sm:left-0 
+                      "
                       key={index}
                       initial="intial"
                       animate={["animate", "intialHide"]}

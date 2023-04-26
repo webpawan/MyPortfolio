@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import { Data } from "../../../../public/Data/Data";
-
+import { motion } from "framer-motion";
 const Project = () => {
   const [data, setData] = useState(Data);
  const [sortOption, setSortOption] = useState("");
@@ -21,30 +21,16 @@ const Project = () => {
             Projects
           </h1>
           <div className="mx-auto container    ">
-            {/* <div className="flex flex-col justify-start items-start w-4/5 mx-auto text-sm">
-            <label
-              for="tech"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            <motion.div
+              className="grid grid-cols-3 grid-rows-2  w-full myGrid"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              staggerChildren={50}
             >
-              Select an option
-            </label>
-            <select
-              id="tech"
-              className="  bg-black border-0  border-b-2 py-2 mt-2 mb-20 focus:border-red-2"
-              value={sortOption}
-              onChange={handleChange}
-            >
-              <option>Choose </option>
-
-              <option>Front-End</option>
-              <option>MERN</option>
-              <option>HTML , CSS & JavaScript</option>
-            </select>
-          </div> */}
-            <div className="grid grid-cols-3 grid-rows-2  w-full myGrid">
               {data.map((item, i) => {
                 return (
-                  <div class="flex justify-center flex-col items-center card ">
+                  <motion.div key={i} whileHover={{scale:1.1}} class="flex justify-center flex-col items-center card ">
                     <div className="img__container--card">
                       <img src={item.img} alt="" srcset="" />
                     </div>
@@ -60,10 +46,10 @@ const Project = () => {
                         </button>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

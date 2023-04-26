@@ -24,27 +24,11 @@ font-weight: 400;
 }
 
 
-.myWheel {
-  height: 60vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
 
-.wheel__tech--left {
-  height: 85%;
-  width: 10%;
-  position: absolute;
-  top: 5%;
-  left: 0;
-}
-.wheel__tech {
-  height: 85%;
-  width: 10%;
-  position: absolute;
-  top: 5%;
-  right: 0;
-}
+
+
+
+
 
 .img__containr {
   rotate: 90deg;
