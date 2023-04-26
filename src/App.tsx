@@ -10,7 +10,7 @@ function App() {
     // Simulate website loading delay
     setTimeout(() => {
       setIsReady(true);
-    }, 3000);
+    }, 2000);
   }, []);
 
   if(!isReady){
@@ -18,12 +18,12 @@ function App() {
   }
 
   return (
-    <div>
+    <>
     
       <Home />
       <About />
       <Project />
-    </div>
+    </>
   );
 }
 
