@@ -1,7 +1,7 @@
 import pic from "../../../assets/images/WhatsApp Image 2023-03-29 at 11.01.51 AM.jpeg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Name from "./svg/Name";
-import resume from "../../../assets/resume/Pawan Saini MERN Developer-React Developer-FrontEnd Developer.pdf";
+import resume from "../../../assets/resume/Pawan Saini (MERN Developer).pdf";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
