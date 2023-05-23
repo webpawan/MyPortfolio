@@ -1,14 +1,11 @@
 import pic from "../../../assets/images/WhatsApp Image 2023-03-29 at 11.01.51 AM.jpeg";
-import { motion,useScroll,useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Name from "./svg/Name";
-import resume from "../../../assets/resume/Pawan Saini (MERN Developer).pdf";
+import resume from "../../../assets/resume/Pawan Saini MERN Developer-React Developer-FrontEnd Developer.pdf";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
-   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-
-
-     
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
     <>
@@ -85,7 +82,7 @@ const Home = () => {
             <div className="flex justify-center items-center">
               <div className="blob"></div>
               <div className="h-52 w-52 rounded-full overflow-hidden  flex items-center justify-center  img__container ">
-                <img src={pic} alt=""  className="" />
+                <img src={pic} alt="" className="" />
               </div>
             </div>
           </motion.div>
