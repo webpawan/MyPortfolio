@@ -4,7 +4,8 @@ body {
 }
 .main_home {
   background: rgba(0, 0, 0, 0.4);
-  background: url("../../../assets/images/resize.jpg") center;
+  background: url("../../../assets/images/simon-lee-HmHOhR5meGo-unsplash.jpg")
+    center;
   background-size: cover;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.123);
   background-attachment: fixed;
