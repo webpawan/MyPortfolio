@@ -9,17 +9,25 @@ const Home = () => {
 
   return (
     <>
-      <motion.div className="h-screen  main_home flex flex-col justify-center items-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { duration: 1.5 },
+        }}
+        className="h-screen  main_home flex flex-col justify-center items-center"
+      >
         <motion.div
-          initial={{ opacity: 1, y: "-500px" }}
+          initial={{ opacity: 0, y: "-100%", scale: 0.8 }}
           animate={{
             opacity: 1,
             y: "0",
+            scale: 1,
             transition: {
-              delay: 0.6,
-              duration: 2,
+              delay: 1.1,
+              duration: 1,
               type: "spring",
-              stiffness: 100,
+              stiffness: 10,
             },
           }}
           style={{ opacity }}
@@ -34,14 +42,17 @@ const Home = () => {
             </h2>
 
             <motion.p
-              initial={{ y: "-1000px" }}
+              initial={{ y: "1000", opacity: 0, scale: 1.5 }}
               animate={{
                 y: "0",
+                opacity: 1,
+                scale: 1,
+
                 transition: {
-                  delay: 1.5,
+                  delay: 2.1,
                   duration: 2,
                   type: "spring",
-                  stiffness: 80,
+                  stiffness: 10,
                 },
               }}
               className="text-3xl  mt-7 p-3 home__para text-orange-50"
@@ -54,11 +65,12 @@ const Home = () => {
               <motion.div
                 animate={{ y: [-8, 20] }}
                 transition={{
-                  duration: 2,
+                  duration: 2.2,
                   ease: "easeInOut",
                   repeat: Infinity,
                   repeatType: "reverse",
                 }}
+                whileHover={{ scale: 1.1 }}
                 className="btn p-5 mt-5 inline-block"
               >
                 Download my Resume
@@ -66,15 +78,18 @@ const Home = () => {
             </a>
           </div>
           <motion.div
-            initial={{ opacity: 0, y: "-100%" }}
+            // animate={{ rotate: 10 }}
+            // transition={{ from: 0, duration: 2 }}
+            initial={{ opacity: 0, x: "-100%", scale: 0.4 }}
             animate={{
               opacity: 1,
-              y: "0",
+              x: "0",
+              scale: 1,
               transition: {
-                delay: 2.5,
-                duration: 2,
+                delay: 2.9,
+                duration: 5.5,
                 type: "spring",
-                stiffness: 100,
+                bounce: 0.35,
               },
             }}
             className=" basis-1/2 flex justify-end items-center relative   parent"
