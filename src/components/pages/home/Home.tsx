@@ -18,23 +18,30 @@ const Home = () => {
         className="h-screen  main_home flex flex-col justify-center items-center"
       >
         <motion.div
-          initial={{ opacity: 0, y: "-100%", scale: 0.8 }}
+          initial={{ opacity: 0, width: "0" }}
           animate={{
             opacity: 1,
-            y: "0",
             scale: 1,
+            width: "85%",
+            height: "80%",
             transition: {
-              delay: 1.1,
-              duration: 1,
-              type: "spring",
-              stiffness: 10,
+              delay: 2.1,
+              duration: 4,
             },
           }}
           style={{ opacity }}
           className="relative flex flex-col sm:flex-row justify-start items-center sm:w-4/5    px-10 z-10 mx-auto home h-[80%] "
         >
           <div className=" basis-1/2 text-center sm:text-left   text-white  ">
-            <motion.p className=" font-semibold text-2xl pb-1  ">
+            <motion.p
+              initial={{ y: "-10px", opacity: 0 }}
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { delay: 8, duration: 3 },
+              }}
+              className=" font-semibold text-2xl pb-1  "
+            >
               <div>Hi, my name is</div>
             </motion.p>
             <h2 className="text-8xl  pt-2  pb-2 ">
@@ -42,14 +49,14 @@ const Home = () => {
             </h2>
 
             <motion.p
-              initial={{ y: "1000", opacity: 0, scale: 1.5 }}
+              initial={{ y: "1000", opacity: 0, scale: 1.3 }}
               animate={{
                 y: "0",
                 opacity: 1,
                 scale: 1,
 
                 transition: {
-                  delay: 2.1,
+                  delay: 5,
                   duration: 2,
                   type: "spring",
                   stiffness: 10,
@@ -78,18 +85,13 @@ const Home = () => {
             </a>
           </div>
           <motion.div
-            // animate={{ rotate: 10 }}
-            // transition={{ from: 0, duration: 2 }}
-            initial={{ opacity: 0, x: "-100%", scale: 0.4 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{
               opacity: 1,
-              x: "0",
               scale: 1,
               transition: {
-                delay: 2.9,
-                duration: 5.5,
-                type: "spring",
-                bounce: 0.35,
+                delay: 2.5,
+                duration: 2,
               },
             }}
             className=" basis-1/2 flex justify-end items-center relative   parent"
