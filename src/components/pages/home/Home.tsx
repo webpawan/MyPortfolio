@@ -2,10 +2,35 @@ import pic from "../../../assets/images/WhatsApp Image 2023-03-29 at 11.01.51 AM
 import { motion, useScroll, useTransform } from "framer-motion";
 import Name from "./svg/Name";
 import resume from "../../../assets/resume/Pawan Saini (MERN Developer).pdf";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const Home = () => {
+  const container = useRef(null);
+
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    let tl1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top top",
+        end: "bottom 10%",
+        scrub: 1,
+      },
+    });
+
+    tl1.fromTo(
+      container.current,
+      {
+        scale: 1,
+      },
+      { scale: 0 }
+    );
+  }, []);
 
   return (
     <>
@@ -31,6 +56,7 @@ const Home = () => {
           }}
           style={{ opacity }}
           className="relative flex flex-col sm:flex-row justify-start items-center sm:w-4/5    px-10 z-10 mx-auto home h-[80%] "
+          ref={container}
         >
           <div className=" basis-1/2 text-center sm:text-left   text-white  ">
             <motion.p

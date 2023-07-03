@@ -1,6 +1,7 @@
-import React, { useState } from "react";
 import "./about.css";
 import { motion } from "framer-motion";
+import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
 
 const items = [
   {
@@ -108,9 +109,8 @@ const About = () => {
             initial={{ y: "100%" }}
             whileInView={{
               y: 0,
-              transition: { type: "spring", stiffness: 100,duration:1 },
+              transition: { type: "spring", stiffness: 100, duration: 1 },
             }}
-            
             className="basis-1/2 bg h-[80vh]  sm:h-[65vh] text-center"
           >
             <div className="flex justify-center items-center  ">
@@ -128,7 +128,7 @@ const About = () => {
               and I am committed to staying up-to-date with the latest
               technologies.
             </p>
-          </motion.div >
+          </motion.div>
           <div className="basis-1/2  h-fit">
             <div className="title flex flex-col h-fit justify-center items-center">
               <h1 className="text-3xl px-10   border-b-2">skills </h1>
